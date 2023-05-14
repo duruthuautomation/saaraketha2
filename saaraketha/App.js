@@ -129,6 +129,7 @@ function HomeScreen() {
       <ImageBackground source={image} style={styles.image}>
     <ScrollView>  
     <Home/>
+    
     </ScrollView>
     </ImageBackground>
     </View>
