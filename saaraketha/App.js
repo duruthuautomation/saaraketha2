@@ -10,9 +10,11 @@ import { NavigationContainer, CommonActions } from '@react-navigation/native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { AppBar } from './components/AppBar';
 import { BackAction } from './components/BackAction';
+import { Iot_bottom_card } from './components/buttons/home_page/iot_bottom_card';
 
 import { Test } from './pages/test';
 import { Home } from './pages/home';
+import {VideoComponent} from './pages/iot_video';
 
 import { styles } from './styles/style';
 import { Asset } from 'expo-asset';
@@ -156,9 +158,13 @@ function SettingsScreen() {
 
 function SettingsScreen2() {
   return (
-    <View style={styles.container}>
-      <Text variant="headlineMedium">Settings!</Text>
+    <SafeAreaProvider>
+      <AppBar />
+      <View style={styles.view_container}>
+      <VideoComponent/>
+      <Iot_bottom_card/>
     </View>
+  </SafeAreaProvider>
   );
 }
 
