@@ -7,7 +7,8 @@ export const styles = StyleSheet.create({
     marginLeft: 10,
     },
     margine_container: {
-        marginLeft: 20,
+      marginRight: 20,
+      marginLeft: 20,
     },
     bottomNav: {
         height: 50,  // Change this value to adjust the height
@@ -29,6 +30,16 @@ export const styles = StyleSheet.create({
       view_container: {
         flex: 1,
         flexDirection: "column"
+      },
+      button_style: {
+        backgroundColor: 'transparent',
+        paddingTop: 10,
+        paddingBottom: 10,
+      },
+      text_btn_style:{
+        backgroundColor: 'transparent',
+        paddingTop: 5,
+        paddingBottom: 5,
       }
 });
 

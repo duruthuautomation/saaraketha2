@@ -10,7 +10,10 @@ import { NavigationContainer, CommonActions } from '@react-navigation/native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { AppBar } from './components/AppBar';
 import { BackAction } from './components/BackAction';
+
 import { Test } from './pages/test';
+import { Home } from './pages/home';
+
 import { styles } from './styles/style';
 import { Asset } from 'expo-asset';
 
@@ -122,7 +125,14 @@ function HomeScreen() {
   return (
     <SafeAreaProvider>
       <AppBar />
-    </SafeAreaProvider>
+      <View style={styles.view_container}>
+      <ImageBackground source={image} style={styles.image}>
+    <ScrollView>  
+    <Home/>
+    </ScrollView>
+    </ImageBackground>
+    </View>
+  </SafeAreaProvider>
   );
 }
      
@@ -132,30 +142,6 @@ function SettingsScreen() {
       <AppBar />
       <View style={styles.view_container}>
       <ImageBackground source={image} style={styles.image}>
-      <ScrollView>  
-      <BackAction />
-      <Test/>
-      <Test/>
-      <Test/>
-      <Test/>
-      <Test/>
-      <Test/>
-      <Test/>
-      <Test/>
-      <Test/>
-      </ScrollView>
-      </ImageBackground>
-      </View>
-    </SafeAreaProvider>
-  );
-}
-
-function SettingsScreen2() {
-  return (
-    <SafeAreaProvider>
-    <AppBar />
-    <View style={styles.view_container}>
-    <ImageBackground source={image} style={styles.image}>
     <ScrollView>  
     <BackAction />
     <Test/>
@@ -164,6 +150,14 @@ function SettingsScreen2() {
     </ImageBackground>
     </View>
   </SafeAreaProvider>
+  );
+}
+
+function SettingsScreen2() {
+  return (
+    <View style={styles.container}>
+      <Text variant="headlineMedium">Settings!</Text>
+    </View>
   );
 }
 
