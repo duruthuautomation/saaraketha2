@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { List, MD3Colors } from 'react-native-paper';
-import { styles } from '../styles/style';
+
 
 const Test = () => (
   <List.Section style={styles.margine_container}>

@@ -11,8 +11,13 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { AppBar } from './components/AppBar';
 import { BackAction } from './components/BackAction';
 import { Test } from './pages/test';
+import { UploadImage } from './pages/UploadImage';
+import { SearchPage} from './pages/Search';
+
+
 import { styles } from './styles/style';
 import { Asset } from 'expo-asset';
+
 
 
 const Tab = createBottomTabNavigator();
@@ -158,8 +163,12 @@ function SettingsScreen2() {
     <ImageBackground source={image} style={styles.image}>
     <ScrollView>  
     <BackAction />
-    <Test/>
-    <Test/>
+   {/* < UploadImage/> */}
+  
+  <SearchPage/>
+    
+    
+
     </ScrollView>
     </ImageBackground>
     </View>
@@ -172,14 +181,20 @@ function SettingsScreen3() {
     <View style={styles.container}>
       <Text variant="headlineMedium">Settings!</Text>
     </View>
+    
   );
 }
 
 function SettingsScreen4() {
   return (
-    <View style={styles.btm_container}>
-      <Text variant="headlineMedium">Settings!</Text>
-    </View>
-  );
+    <SafeAreaProvider>
+      <AppBar />
+      <BackAction />
+    
+
+    </SafeAreaProvider>
+    
+   );
+  
 }
 

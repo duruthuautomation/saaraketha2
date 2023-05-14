@@ -29,7 +29,8 @@ export const styles = StyleSheet.create({
       view_container: {
         flex: 1,
         flexDirection: "column"
-      }
+      },
+      
 });
 
 export const GradientBackground = ({ children }) => (
