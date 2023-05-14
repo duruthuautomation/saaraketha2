@@ -10,7 +10,11 @@ import { NavigationContainer, CommonActions } from '@react-navigation/native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { AppBar } from './components/AppBar';
 import { BackAction } from './components/BackAction';
+
 import { Test } from './pages/test';
+import { UploadVideoPage } from './pages/UploadVideoPage';
+import { UploadImage } from './pages/UploadImage';
+
 import { styles } from './styles/style';
 import { Asset } from 'expo-asset';
 
@@ -169,9 +173,19 @@ function SettingsScreen2() {
 
 function SettingsScreen3() {
   return (
-    <View style={styles.container}>
-      <Text variant="headlineMedium">Settings!</Text>
+    <SafeAreaProvider>
+    <AppBar />
+    <View style={styles.view_container}>
+    <ImageBackground source={image} style={styles.image}>
+    <ScrollView>  
+    <BackAction title="Real-time Disease Identification" />
+
+    <UploadImage />
+
+    </ScrollView>
+    </ImageBackground>
     </View>
+  </SafeAreaProvider>
   );
 }
 

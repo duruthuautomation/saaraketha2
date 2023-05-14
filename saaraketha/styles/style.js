@@ -8,6 +8,7 @@ export const styles = StyleSheet.create({
     },
     margine_container: {
         marginLeft: 20,
+        marginRight: 20,
     },
     bottomNav: {
         height: 50,  // Change this value to adjust the height
@@ -29,7 +30,42 @@ export const styles = StyleSheet.create({
       view_container: {
         flex: 1,
         flexDirection: "column"
-      }
+      },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      text_panding:{
+        marginTop: 15,
+        marginBottom:10
+      },
+
+      badge_container: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginTop:15
+      },
+      text_pand: {
+        marginRight: 8,
+      },
+
+      divider_padding: {
+        marginTop:11,
+        marginBottom:11
+      },
+
 });
 
 export const GradientBackground = ({ children }) => (
